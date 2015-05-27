@@ -3,7 +3,7 @@
 #
 FROM centos:centos6
 
-MAINTAINER JTarlton <john_tarlton@yahoo.co.uk>
+MAINTAINER JTarlton 
 
 RUN yum -y update
 RUN yum -y install epel-release
