@@ -8,7 +8,6 @@ CentOS based Docker container for the Logitech Media Server (SqueezeboxServer)
 
 ## Run
 Using data volumes for music files and configuration data.
-    docker run -i --rm \
-    -p 9000:9000 -p 9090:9090 -p 3483:3483 -p 3483:3483/udp \
+    docker run -i --rm -p 9000:9000 -p 9090:9090 -p 3483:3483 -p 3483:3483/udp \
     --volumes-from music:ro --volumes-from lms-data:rw \
     -t jtarlton/logitechmediaserver
