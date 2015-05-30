@@ -3,12 +3,11 @@
 #
 FROM centos:centos6
 
-MAINTAINER JTarlton 
+MAINTAINER JTarlton <john_tarlton@yahoo.co.uk>
 
-RUN yum -y update
-RUN yum -y install epel-release
-
-RUN yum -y install perl \
+RUN yum -y update \
+ && yum -y install epel-release \
+ perl \
  perl-Time-HiRes \
  perl-DBI \
  perl-JSON-XS \
@@ -20,7 +19,7 @@ RUN yum -y install perl \
  perl-EV \
  perl-CGI
 
-RUN rpm -Uvh http://downloads.slimdevices.com/LogitechMediaServer_v7.7.3/logitechmediaserver-7.7.3-1.noarch.rpm
+RUN rpm -Uvh http://downloads.slimdevices.com/LogitechMediaServer_v7.8.0/logitechmediaserver-7.8.0-1.noarch.rpm
 
 # Ports: 3483 control, 3483/udp discovery, 9000 web ui, 9090 cli.
 EXPOSE 3483 3483/udp 9000 9090
